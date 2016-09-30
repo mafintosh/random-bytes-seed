@@ -19,7 +19,7 @@ console.log(randomBytes(20)) // get 20 pseudo random bytes
 ```
 
 If you run the above example multiple times you'll notice it is returning the same "random" bytes every time because it is using the same seed.
-You should only use this for testing / debugging as there are probably some security problems with the way this is implemented  ¯\_(ツ)_/¯.
+You should only use this for testing / debugging as there are probably some security problems with the way this is implemented  ¯\\_(ツ)_/¯.
 
 When testing you can override `crypto.randomBytes` with the seeded version like this
 
