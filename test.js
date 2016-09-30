@@ -1,5 +1,5 @@
 var tape = require('tape')
-var seed = require('random-bytes-seed')
+var seed = require('./')
 
 tape('returns a buffer', function (t) {
   var randomBytes = seed()
