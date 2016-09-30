@@ -6,6 +6,8 @@ Get a random buffer based on a seed. Useful for reproducible tests.
 npm install random-bytes-seed
 ```
 
+[![build status](http://img.shields.io/travis/mafintosh/random-bytes-seed.svg?style=flat)](http://travis-ci.org/mafintosh/random-bytes-seed)
+
 ## Usage
 
 ``` js
