@@ -1,6 +1,6 @@
 {
   "name": "random-bytes-seed",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Get a random buffer based on a seed. Useful for reproducible tests",
   "main": "index.js",
   "dependencies": {},
