@@ -8,7 +8,7 @@ module.exports = function (seed) {
   return randomBytes
 
   function randomBytes (n) {
-    var result = new Buffer(n)
+    var result = Buffer.allocUnsafe(n)
     var used = 0
 
     while (used < result.length) {
