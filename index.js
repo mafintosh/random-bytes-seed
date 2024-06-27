@@ -1,11 +1,5 @@
 const sodium = require('sodium-universal')
 
-const randomBytesClassic = (n) => {
-  const buf = Buffer.allocUnsafe(n)
-  sodium.randombytes_buf(buf)
-  return buf
-}
-
 module.exports = function (seed) {
   randomBytes.seed = seed = seed || randomBytesClassic(32)
   randomBytes.currentSeed = seed
@@ -30,4 +24,10 @@ function next (seed) {
   const output = Buffer.alloc(32)
   sodium.crypto_hash_sha256(output, Buffer.from(seed))
   return output
+}
+
+function randomBytesClassic (n) {
+  const buf = Buffer.allocUnsafe(n)
+  sodium.randombytes_buf(buf)
+  return buf
 }
