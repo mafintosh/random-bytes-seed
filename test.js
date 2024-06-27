@@ -1,34 +1,30 @@
-const tape = require('tape')
+const test = require('brittle')
 const seed = require('./')
 
-tape('returns a buffer', function (t) {
+test('returns a buffer', (t) => {
   const randomBytes = seed()
 
   let b = randomBytes(10)
   t.ok(Buffer.isBuffer(b))
-  t.same(b.length, 10)
+  t.is(b.length, 10)
 
   b = randomBytes(100)
   t.ok(Buffer.isBuffer(b))
-  t.same(b.length, 100)
-
-  t.end()
+  t.is(b.length, 100)
 })
 
-tape('is seedable', function (t) {
+test('is seedable', (t) => {
   let randomBytes = seed()
 
   const b1 = randomBytes(10)
   t.ok(Buffer.isBuffer(b1))
-  t.same(b1.length, 10)
+  t.is(b1.length, 10)
 
   const b2 = randomBytes(100)
   t.ok(Buffer.isBuffer(b2))
-  t.same(b2.length, 100)
+  t.is(b2.length, 100)
 
   randomBytes = seed(randomBytes.seed)
-  t.same(b1, randomBytes(10))
-  t.same(b2, randomBytes(100))
-
-  t.end()
+  t.alike(b1, randomBytes(10))
+  t.alike(b2, randomBytes(100))
 })
