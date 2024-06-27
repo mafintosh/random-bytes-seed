@@ -3,9 +3,11 @@
   "version": "1.0.3",
   "description": "Get a random buffer based on a seed. Useful for reproducible tests",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "sodium-universal": "^4.0.1"
+  },
   "devDependencies": {
-    "standard": "^8.3.0",
+    "standard": "^17.1.0",
     "tape": "^4.6.1"
   },
   "repository": {
