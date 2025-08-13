@@ -4,7 +4,7 @@
   "description": "Get a random buffer based on a seed. Useful for reproducible tests",
   "main": "index.js",
   "dependencies": {
-    "sodium-universal": "^4.0.1"
+    "sodium-universal": "^5.0.0"
   },
   "devDependencies": {
     "brittle": "^3.5.2",
